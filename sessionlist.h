@@ -10,7 +10,7 @@
 typedef struct session_data_struct
 {
   date_t date;
-  int exercise_type;
+  int corona_code;
 
 }session_data; 
 /**
@@ -65,7 +65,6 @@ sessionlist list_create();
  void list_print_all(sessionlist list);
 
 
-
 /**
   * Function for writing entire list to file
   * @param fileptr Pointer to file to be written to
@@ -105,4 +104,7 @@ sessionlist list_create();
   */
 
 void remove_all_of_type(sessionlist *listptr, date_t old_days);
+
+
+
  

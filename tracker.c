@@ -51,18 +51,18 @@ int prompt_user()
 
 int read_exercise_type()
 {
-    int exercise_type;
+    int corona_code;
     printf("==============================");
     printf("\nType : ");
     
-    while (!scanf("%d", &exercise_type))
+    while (!scanf("%d", &corona_code))
     {
         printf("Incorrect input, please input an integer for duration.\n");
         clear_buffer();
         printf("Type : ");
     }
     printf("==============================");
-    return exercise_type;
+    return corona_code;
 }
 
 date_t read_date()
@@ -104,8 +104,9 @@ void add_session()
 {
     session_data new_session;
     new_session.date = read_date();
-    new_session.exercise_type = read_exercise_type();
+    new_session.corona_code = read_exercise_type();
     list_insert(&my_sessions, new_session);
+
     
 }
 
@@ -171,7 +172,6 @@ int main()
 
         case 4:
             remove_all_of_type(&my_sessions, old_days);
-                
             break;
 
         case 5:

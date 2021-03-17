@@ -20,12 +20,12 @@ int main()
 
     set_date(&date1, 24, 2, 2021);
     session1.date = date1;
-    session1.exercise_type =100;
+    session1.corona_code =100;
     list_insert(&myList, session1);
     VERIFY(!list_is_empty(myList), "List is not empty");
 
     TEST_CASE("Insert second element");
-    session1.exercise_type = 111;
+    session1.corona_code = 111;
     session1.date = get_previous_day(date1);
     list_insert(&myList, session1);
     VERIFY(!list_is_empty(myList), "List is not empty");
@@ -38,7 +38,7 @@ int main()
     {
         date1 = get_previous_day(date1);
         session1.date = date1;
-        session1.exercise_type =i;
+        session1.corona_code =i;
         list_insert(&myList, session1);
 
     } 
@@ -54,11 +54,11 @@ int main()
     VERIFY (list_is_empty(myList), "list_is_empty.");
 
     TEST_CASE("Insert more elements with different code type.");
-    for (int i = 0; i < 27; i++)
+    for (int i = 0; i < 10; i++)
     {
         date1 = get_previous_day(date1);
         session1.date = date1;
-        session1.exercise_type = i;
+        session1.corona_code = i;
         list_insert(&myList, session1);
 
     } 

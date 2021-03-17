@@ -19,6 +19,8 @@ int days_per_month[13] = {0, 31, 28, 31, 30, 31, 31, 30, 31, 30, 31, 30, 31};
  *@param a_date The date to check
  *@returns an integer representing the maximum numbar of days ingiven month
  */
+
+
 int get_days_per_month(date_t a_date)
 {
  if ((a_date.month == 2) && (ceck_year(a_date)))
@@ -139,6 +141,8 @@ else //first.day > second.day or dates_equal
 {
    return false;
 }
+
+
 
 }
 date_t get_previous_day(date_t a_date)
